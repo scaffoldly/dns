@@ -6,5 +6,24 @@
     cache 30
     reload
     loadbalance
-    auto /zones
+}
+
+sly-dns.biz:53 {
+    file /zones/sly-dns.biz.zone
+    log
+}
+
+sly-dns.net:53 {
+    file /zones/sly-dns.net.zone
+    log
+}
+
+sly-dns.org:53 {
+    file /zones/sly-dns.org.zone
+    log
+}
+
+sly-dns.xyz:53 {
+    file /zones/sly-dns.xyz.zone
+    log
 }

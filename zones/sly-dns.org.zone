@@ -1,0 +1,6 @@
+$ORIGIN sly-dns.org.
+@ 900 IN SOA sly-dns.org. domains.scaffold.ly. ( 1 7200 900 1209600 86400 )
+@ 172800 IN NS sly-dns.xyz.
+@ 172800 IN NS sly-dns.biz.
+@ 300 IN A 98.113.40.21
+@ 300 IN AAAA 2600:4041:5899:6000:9dd0:f2f6:31bd:eb22

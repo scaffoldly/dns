@@ -35,6 +35,7 @@ jobs:
             type=ref,event=pr
             type=sha
       - uses: docker/build-push-action@v6
+        id: push
         with:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -43,3 +44,8 @@ jobs:
           cache-to: type=gha,mode=max
           pull: true
           push: true
+      - uses: actions/attest-build-provenance@v3
+        with:
+          subject-name: ghcr.io/${{ github.repository }}
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
